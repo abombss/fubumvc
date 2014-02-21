@@ -36,7 +36,6 @@ namespace FubuMVC.Autofac.Testing.Internals
         {
             var builder = new ContainerBuilder();
             builder.RegisterType<FileSystem>().As<IFileSystem>();
-            builder.RegisterInstance(MockRepository.GenerateMock<IStreamingData>()).As<IStreamingData>();
             builder.RegisterInstance(new NulloHttpWriter()).As<IHttpWriter>();
             builder.RegisterInstance(new CurrentChain(null, null)).As<ICurrentChain>();
             builder.RegisterInstance(
